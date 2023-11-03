@@ -48,7 +48,7 @@
     <h1 class="font-clash pure-new-title">
         Pure Parts Editor
     </h1>
-    <div class="iwannasleep" style="display:flex;flex-direction: row;flex-wrap: nowrap;overflow-x: auto;height:fit-content;align-items: start;top:12rem;position:relative;">
+    <div class="iwannasleep">
         <div id="pure-page-1">
             <div class="pure-new-button">
                 <a href="#create">Creat a new part</a>
@@ -62,15 +62,32 @@
             <div class="create-form">
                     <form class="pure-form" id="part-type">
                         <span class="question">Part type</span>
-                        <input type="radio" name="type">Basic part
-                        <input type="radio" name="type">New composite part
+                        <input type="radio" name="type" value="basic">Basic part
+                        <input type="radio" name="type" value="composite">Composite part
+                        <p class="small-ps">*A basic part is a functional unit of DNA that cannot be subdivided into smaller component parts. <br>&nbsp&nbspA composite part is a functional unit of DNA consisting of two or more basic parts assembled together.</p>
                     </form>
-                    <form class="pure-form" id="part-no">
+                    <form class="pure-form">
                         <span class="question">Part No.</span>
-                        <input type="text" name="" placeholder="example:BBa_K4630100">
-                        <p class="small-ps">*You can check your team's assigned part No. <a href="https://old.igem.org/Team.cgi#table_ranges">here</a>, enter one you like, and we'll check if it's still available.</p>
+                        <input id="part_short_name" type="text" name="" placeholder="eg: BBa_K4630100">
+                        <p class="small-ps">*You can check the numbers assigned to your team <a href="https://old.igem.org/Team.cgi#table_ranges">here</a>. Enter one you like, and we'll check if it's still available.</p>
                     </form>
-                    
+                    <form class="pure-form">
+                        <span class="question">Part Name</span>
+                        <input id="part_short_desc" type="text" name="" placeholder="eg: stgRNA-cassette">
+                        <p class="small-ps">*Name your part with a few words.</p>
+                    </form>
+                    <form class="pure-form">
+                        <span class="question">Describe your part with paragraphs</span>
+                        <div class="rich-text-container" id="main_page"></div>
+                        <p class="small-ps">*This will be the content of your part's main page.</p>
+                    </form>
+                    <form class="pure-form">
+                        <span class="question">Enter Sequence</span>
+                        <textarea class="rich-text-container" id="sequence"></textarea>
+                        <p class="small-ps">*For basic part, paste DNA sequence here.
+                            <br>&nbsp&nbspFor composite part, your input can be a combination of three parts: Other basic part's number, assembly compatibility (eg. RFC[10], RFC[12]), and DNA sequence.
+                        </p>
+                    </form>
                 <div>
 
                 </div>
@@ -87,5 +104,4 @@
         </div>
     </div>
 </div>
-
 {% endblock %}
