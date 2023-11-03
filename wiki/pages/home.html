@@ -44,5 +44,48 @@
       });
 
   </script>
+<div style="min-height: 100vh;width:100%;background:#222124;">
+    <h1 class="font-clash pure-new-title">
+        Pure Parts Editor
+    </h1>
+    <div class="iwannasleep" style="display:flex;flex-direction: row;flex-wrap: nowrap;overflow-x: auto;height:fit-content;align-items: start;top:12rem;position:relative;">
+        <div id="pure-page-1">
+            <div class="pure-new-button">
+                <a href="#create">Creat a new part</a>
+            </div>
+            <div class="pure-new-button">
+                <a href="#edit">Edit an existing part</a>
+            </div>
+        </div>
+        <div id="create-2">
+            <div class="scroll-placeholder" id="create"></div>
+            <div class="create-form">
+                    <form class="pure-form" id="part-type">
+                        <span class="question">Part type</span>
+                        <input type="radio" name="type">Basic part
+                        <input type="radio" name="type">New composite part
+                    </form>
+                    <form class="pure-form" id="part-no">
+                        <span class="question">Part No.</span>
+                        <input type="text" name="" placeholder="example:BBa_K4630100">
+                        <p class="small-ps">*You can check your team's assigned part No. <a href="https://old.igem.org/Team.cgi#table_ranges">here</a>, enter one you like, and we'll check if it's still available.</p>
+                    </form>
+                    
+                <div>
+
+                </div>
+            </div>
+        </div>
+        <div id="edit-2">
+            <div class="scroll-placeholder" id="edit"></div>
+            <div class="pure-new-button">
+                <a href="#create">yeah</a>
+            </div>
+            <div class="pure-new-button">
+                <a href="#create">yeah2</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
