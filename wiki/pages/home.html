@@ -2,49 +2,6 @@
 
 {% block content %}
 
-<!-- 移除了固定位置的CSS类的导航栏 -->
-<div id="part-menubar" class="noprint">
-    <nav id="part-menu" style="display: flex; justify-content: space-around; align-items: center; background: #f2f2f2; padding: 10px;">
-      <a href="http://parts.igem.org/Part:BBa_K4766009">main page</a>
-      <a href="http://parts.igem.org/Part:BBa_K4766009:Design">design</a>
-      <a href="http://parts.igem.org/Part:BBa_K4766009:Experience">experience</a>
-      <a href="http://parts.igem.org/cgi/partsdb/part_info.cgi?part_name=BBa_K4766009">information</a>
-      <div id="part_menu_key" style="position: relative;">
-        <a href="#" style="color: inherit;">part tools</a>
-        <div id="part_menu_div" style="display: none; position: absolute; top: 100%; left: 0; background: #ffffff; border: 1px solid #ccc; padding: 5px;">
-          <!-- 下拉菜单内容，鼠标悬停时显示 -->
-        </div>
-      </div>
-      <div id="e_part_menu_key" style="position: relative;">
-        <a href="#" style="color: rgb(200, 150, 0);">edit</a>
-        <div id="e_part_menu_div" style="display: none; position: absolute; top: 100%; left: 0; background: #ffffff; border: 1px solid #ccc; padding: 5px; color: #000;">
-          <!-- 编辑菜单的内容，鼠标悬停时显示 -->
-        </div>
-      </div>
-    </nav>
-    </div>
-
-<script>
-    installMenu('part_menu_key', 'BBa_K4766009');
-    e_installMenu('e_part_menu_key', 0, 'BBa_K4766009');
-</script>
-
-  <div class="editor-container">
-    <textarea id="editor">Start your parts here ...</textarea>
-  </div>
-
-  <script>
-    ClassicEditor
-      .create(document.querySelector('#editor'))
-      .then(editor => {
-        console.log(editor);
-      })
-      .catch(error => {
-        console.error(error);
-      });
-
-  </script>
-
 <div id="emmmm" style="width:100%;background:#222124;position:relative;">
     <h1 class="font-clash pure-new-title">
         Pure Parts Editor
@@ -81,9 +38,7 @@
                     </form>
                     <form class="pure-form">
                         <span class="question">Describe your part with paragraphs</span>
-                        <div class="rich-text-container" id="main_page">
-                            <!-- 富文本编辑器放这里 -->
-                        </div>
+                        {% include "rich-text-container.html" %}
                         <p class="small-ps">*This will be the content of your part's main page.</p>
                     </form>
                     <form class="pure-form">
@@ -134,9 +89,7 @@
                             </form>
                             <form class="pure-form">
                                 <span class="question">Enter review paragraphs</span>
-                                <div class="rich-text-container" id="mainpage_content">
-                                    <!-- 富文本编辑器放这里 -->
-                                </div>
+                                {% include "rich-text-container.html" %}
                                 <p class="small-ps">*To avoid disturbing previous teams' content, this new submission will be added at the end of the page.
                                     <br>If you want to add content in the middle, go <a href="edit-existing">here</a>. Warning: This might break the layout of the whole page.
                                 </p>
@@ -163,9 +116,7 @@
                             </form>
                             <form class="pure-form">
                                 <span class="question">Enter review paragraphs</span>
-                                <div class="rich-text-container" id="design_content">
-                                    <!-- 富文本编辑器放这里 -->
-                                </div>
+                                {% include "rich-text-container.html" %}
                                 <p class="small-ps">*To avoid disturbing previous teams' content, this new submission will be added at the end of the page.
                                     <br>If you want to add content in the middle, go <a href="edit-existing">here</a>. Warning: This might break the layout of the whole page.
                                 </p>
@@ -208,9 +159,7 @@
                             </form>
                             <form class="pure-form">
                                 <span class="question">Enter review paragraphs</span>
-                                <div class="rich-text-container" id="review_content">
-                                    <!-- 富文本编辑器放这里 -->
-                                </div>
+                                {% include "rich-text-container.html" %}
                                 <!-- <p class="small-ps"></p> -->
                             </form>
                             <form class="pure-form">

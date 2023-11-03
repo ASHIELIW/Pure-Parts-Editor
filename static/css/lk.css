@@ -26,11 +26,9 @@
   
   /* Editor container styles */
   .editor-container {
-    display: flex;
-    flex: 1; /* Takes up all available space */
-    padding: 10px;
-    justify-content: center; /* Center the editor horizontally */
-    align-items: center; /* Center the editor vertically */
+    width: 100%;  /* 宽度占满父元素 */
+    height: 100%; /* 高度占满父元素 */
+    /* 如果需要的话，这里还可以添加内边距或者边框等样式 */
   }
   
   /* Editor content styles */
@@ -62,6 +60,7 @@
     }
   }
 
+  
     /* 设置编辑器容器的固定宽度 */
     .ck-editor__editable {
         width: 80vw; /* 或者你想要的任何固定宽度 */
@@ -70,13 +69,10 @@
         word-wrap: break-word; /* 在长单词或URL地址无法完全放入容器宽度时进行换行 */
     }
 
-  .ck-sticky-panel .ck-toolbar {
-    position: static !important;
-}
-
-    .ck-sticky-panel .ck-toolbar {
-        position: static !important;
-    }
+    .ck.ck-content {
+      height: 100%;
+  }
+  
 
 
 
