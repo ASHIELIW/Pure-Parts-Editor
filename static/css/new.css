@@ -1,0 +1,257 @@
+@font-face {
+    font-family:Clash;
+    src:url(https://static.igem.org/websites/common/2022/fonts/clash/clashdisplay-variable.ttf) format("truetype")
+}
+@font-face {
+    font-family:Inter;
+    font-weight:100;
+    src:url(https://static.igem.io/common/fonts/Inter/Inter-Thin.woff) format("woff")
+  }
+  @font-face {
+    font-family:Inter;
+    font-weight:100;
+    font-style:italic;
+    src:url(https://static.igem.io/common/fonts/Inter/Inter-ThinItalic.woff) format("woff")
+  }
+  @font-face {
+    font-family:Inter;
+    font-weight:200;
+    src:url(https://static.igem.io/common/fonts/Inter/Inter-ExtraLight.woff) format("woff")
+  }
+  @font-face {
+    font-family:Inter;
+    font-weight:200;
+    font-style:italic;
+    src:url(https://static.igem.io/common/fonts/Inter/Inter-ExtraLightItalic.woff) format("woff")
+  }
+  @font-face {
+    font-family:Inter;
+    font-weight:300;
+    src:url(https://static.igem.io/common/fonts/Inter/Inter-Light.woff) format("woff")
+  }
+  @font-face {
+    font-family:Inter;
+    font-weight:300;
+    font-style:italic;
+    src:url(https://static.igem.io/common/fonts/Inter/Inter-LightItalic.woff) format("woff")
+  }
+  @font-face {
+    font-family:Inter;
+    font-weight:400;
+    src:url(https://static.igem.io/common/fonts/Inter/Inter-Regular.woff) format("woff")
+  }
+  @font-face {
+    font-family:Inter;
+    font-weight:400;
+    font-style:italic;
+    src:url(https://static.igem.io/common/fonts/Inter/Inter-Italic.woff) format("woff")
+  }
+  @font-face {
+    font-family:Inter;
+    font-weight:500;
+    src:url(https://static.igem.io/common/fonts/Inter/Inter-Medium.woff) format("woff")
+  }
+  @font-face {
+    font-family:Inter;
+    font-weight:500;
+    font-style:italic;
+    src:url(https://static.igem.io/common/fonts/Inter/Inter-MediumItalic.woff) format("woff")
+  }
+  @font-face {
+    font-family:Inter;
+    font-weight:600;
+    src:url(https://static.igem.io/common/fonts/Inter/Inter-Semibold.woff) format("woff")
+  }
+  @font-face {
+    font-family:Inter;
+    font-weight:600;
+    font-style:italic;
+    src:url(https://static.igem.io/common/fonts/Inter/Inter-SemiboldItalic.woff) format("woff")
+  }
+  @font-face {
+    font-family:Inter;
+    font-weight:700;
+    src:url(https://static.igem.io/common/fonts/Inter/Inter-Bold.woff) format("woff")
+  }
+  @font-face {
+    font-family:Inter;
+    font-weight:700;
+    font-style:italic;
+    src:url(https://static.igem.io/common/fonts/Inter/Inter-BoldItalic.woff) format("woff")
+  }
+  @font-face {
+    font-family:Inter;
+    font-weight:800;
+    src:url(https://static.igem.io/common/fonts/Inter/Inter-ExtraBold.woff) format("woff")
+  }
+  @font-face {
+    font-family:Inter;
+    font-weight:800;
+    font-style:italic;
+    src:url(https://static.igem.io/common/fonts/Inter/Inter-ExtraBoldItalic.woff) format("woff")
+  }
+  @font-face {
+    font-family:Inter;
+    font-weight:900;
+    src:url(https://static.igem.io/common/fonts/Inter/Inter-Black.woff) format("woff")
+  }
+  @font-face {
+    font-family:Inter;
+    font-weight:900;
+    font-style:italic;
+    src:url(https://static.igem.io/common/fonts/Inter/Inter-BlackItalic.woff) format("woff")
+  }
+
+
+.font-clash {
+    font-family:Clash,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji"
+  }
+
+.pure-new-title {
+    color:transparent;
+    display:block;
+    background:linear-gradient(45deg, #08c784 0%,#387be6 100%);
+    top:8rem;
+    position:relative;
+    font-size: 5rem;
+    width:100%;
+    height:min-content;
+    text-align: center;
+    background-clip:text;
+    -webkit-background-clip: text;
+    line-height: 100%;
+}
+.pure-new-title::after {
+    content:'';
+    width:45REM;
+    left:calc(50% - 22.5rem);
+    height:5px;
+    background:linear-gradient(45deg, #08c784 0%,#387be6 100%);
+    display:block;
+    position: absolute;
+    top:95%;
+    border-radius: 5px;
+    /* animation: pure-new-title-line 3s alternate infinite; */
+}
+/* @keyframes pure-new-title-line {
+    from {
+        width:0;
+        left:calc(50% - 0);
+    }
+    to {
+        width:60REM;
+        left:calc(50% - 30rem);
+    }
+} */
+#pure-page-1 {
+    flex:none;
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    width:100%;
+    align-items: center;
+    height:fit-content;
+    top:0;
+}
+#create-2 {
+    flex:none;
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    width:100%;
+    align-items: center;
+    height:fit-content;
+    overflow-y:visible;
+    margin-top: -20rem;
+    z-index:2;
+}
+#edit-2 {
+    flex:none;
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    width:100%;
+    align-items: center;
+    height:fit-content;
+    overflow-y:visible;
+    margin-top: -20rem;
+    z-index:2;
+}
+.scroll-placeholder {
+    height:20rem;
+    display:block;
+    position:relative;
+    width:100%;
+    background:white;
+    padding:0;
+    margin:0;
+    margin-top:0;
+}
+.pure-new-button a {
+    font-family: Clash;
+    font-weight: 400;
+    color: white;
+    height:100%;
+    width:100%;
+}
+.pure-new-button:hover a {
+    color: #6097f0;
+    text-decoration: underline;
+}
+.pure-new-button:hover {
+    transform: translateY(-10px);
+}
+.pure-new-button {
+    width:fit-content;
+    position: relative;
+    padding: 20px;
+    border:3px transparent solid;
+    background: linear-gradient(to right, #222124, #222124), linear-gradient(45deg, #08c784 0%,#387be6 100%);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    border-radius: 300px;
+    margin:50px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.create-form {
+    width:70%;
+    height:fit-content;
+    min-height:30px;
+    border:3px transparent solid;
+    background: linear-gradient(to right, #222124, #222124), linear-gradient(45deg, #08c784 0%,#387be6 100%);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    border-radius: 30px;
+    padding:30px;
+}
+form.pure-form {
+    font-family: Inter;
+    font-weight: 500;
+    color:white;
+    margin:10px 0;
+}
+form.pure-form .question {
+    font-family: Clash;
+    font-weight:400;
+    color:#08c784;
+    font-size: 1.5rem;
+    padding-right:10px;
+}
+form.pure-form input {
+    margin-left:15px;
+    border:#83ffd4 2px solid;
+    background:transparent;
+    border-radius: 10px;
+    padding:5px 5px 5px 15px;
+}
+.small-ps {
+    color:#ffffff;
+    opacity:50%;
+    padding-left:50px;
+    padding-top:5px;
+}
+.small-ps a {
+    color:#08c784
+}
