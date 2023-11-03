@@ -45,7 +45,7 @@
 
   </script>
 
-<div style="min-height:calc(100vh + 27rem);width:100%;background:#222124;height:fit-content;position:relative">
+<div id="emmmm" style="width:100%;background:#222124;position:relative;">
     <h1 class="font-clash pure-new-title">
         Pure Parts Editor
     </h1>
@@ -81,7 +81,9 @@
                     </form>
                     <form class="pure-form">
                         <span class="question">Describe your part with paragraphs</span>
-                        <div class="rich-text-container" id="main_page"></div>
+                        <div class="rich-text-container" id="main_page">
+                            <!-- 富文本编辑器放这里 -->
+                        </div>
                         <p class="small-ps">*This will be the content of your part's main page.</p>
                     </form>
                     <form class="pure-form">
@@ -107,32 +109,121 @@
         <div id="edit-2">
             <div class="scroll-placeholder" id="edit"></div>
             <div class="create-form">
-                <div style="display: flex;flex-wrap: wrap;justify-content: center;align-content: flex-start;flex-direction: row;">
-                    <div class="pure-new-button edit" style="margin:10px">
+                <div style="display: flex;flex-wrap: nowrap;justify-content: center;align-content: flex-start;flex-direction: row;margin-bottom:20px;">
+                    <div class="pure-new-button edit">
                         <a href="#add-main">Add content to main page</a>
                     </div>
-                    <div class="pure-new-button edit" style="margin:10px">
+                    <div class="pure-new-button edit">
                         <a href="#add-design">Add content to design</a>
                     </div>
-                    <div class="pure-new-button edit" style="margin:10px">
+                    <div class="pure-new-button edit">
                         <a href="#add-review">Add an experience review</a>
                     </div>
-                    <div class="pure-new-button edit" style="margin:10px">
+                    <div class="pure-new-button edit">
                         <a href="#edit-existing">Edit existing content</a>
                     </div>
                 </div>
                 <div style="height:fit-content;min-height: 50px;scroll-behavior: smooth;overflow-x: hidden;overflow-y: visible;display: flex;flex-direction: row;flex-wrap: nowrap;align-content: flex-start;justify-content: flex-start;align-items: flex-start;">
-                    <div class="edit-card" style="background:red">
+                    <div class="edit-card">
                         <div id="add-main" class="scroll-placeholder another"></div>
-                        <div class="edit-form"></div>
+                        <div class="edit-form">
+                            <form class="pure-form">
+                                <span class="question">Part No.</span>
+                                <input id="mainpage-part-number" type="text" name="" placeholder="eg: BBa_K4630100">
+                                <!-- <p class="small-ps">Enter the you like to add an review.</p> -->
+                            </form>
+                            <form class="pure-form">
+                                <span class="question">Enter review paragraphs</span>
+                                <div class="rich-text-container" id="mainpage_content">
+                                    <!-- 富文本编辑器放这里 -->
+                                </div>
+                                <p class="small-ps">*To avoid disturbing previous teams' content, this new submission will be added at the end of the page.
+                                    <br>If you want to add content in the middle, go <a href="edit-existing">here</a>. Warning: This might break the layout of the whole page.
+                                </p>
+                            </form>
+                            <form class="pure-form">
+                                <span class="question">Tag your submission</span>
+                                <input id="mainpage-tag" type="text" name="" placeholder="eg: whatever-you-like">
+                                <p class="small-ps">*Should only contain letters, numbers and hyphens. This tag won't appear on the page. However if you want to edit your content in the future, it will help you locate your content quickly.</p>
+                            </form>
+                            <div style="width:100%; height:fit-content;position:relative;padding-bottom:50px;margin-top:20px;">
+                                <div class="solid-button">
+                                    <a>Submit</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="edit-card" style="background:blue">
+                    <div class="edit-card">
                         <div id="add-design" class="scroll-placeholder another"></div>
-                        <div class="edit-form"></div>
+                        <div class="edit-form">
+                            <form class="pure-form">
+                                <span class="question">Part No.</span>
+                                <input id="design-part-number" type="text" name="" placeholder="eg: BBa_K4630100">
+                                <!-- <p class="small-ps">Enter the you like to add an review.</p> -->
+                            </form>
+                            <form class="pure-form">
+                                <span class="question">Enter review paragraphs</span>
+                                <div class="rich-text-container" id="design_content">
+                                    <!-- 富文本编辑器放这里 -->
+                                </div>
+                                <p class="small-ps">*To avoid disturbing previous teams' content, this new submission will be added at the end of the page.
+                                    <br>If you want to add content in the middle, go <a href="edit-existing">here</a>. Warning: This might break the layout of the whole page.
+                                </p>
+                            </form>
+                            <form class="pure-form">
+                                <span class="question">Tag your submission</span>
+                                <input id="design-tag" type="text" name="" placeholder="eg: whatever-you-like">
+                                <p class="small-ps">*Should only contain letters, numbers and hyphens. This tag won't appear on the page. However if you want to edit your content in the future, it will help you locate your content quickly.</p>
+                            </form>
+                            <div style="width:100%; height:fit-content;position:relative;padding-bottom:50px;margin-top:20px;">
+                                <div class="solid-button">
+                                    <a>Submit</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="edit-card" style="background:blueviolet">
+                    <div class="edit-card">
                         <div id="add-review" class="scroll-placeholder another"></div>
-                        <div class="edit-form"></div>
+                        <div class="edit-form">
+                            <form class="pure-form">
+                                <span class="question">Your team name</span>
+                                <input id="team-name" type="text" name="" placeholder="eg: WHU-China 2023">
+                                <!-- <p class="small-ps">Enter the you like to add an review.</p> -->
+                            </form>
+                            <form class="pure-form">
+                                <span class="question">Part No.</span>
+                                <input id="review-part-number" type="text" name="" placeholder="eg: BBa_K4630100">
+                                <!-- <p class="small-ps">Enter the you like to add an review.</p> -->
+                            </form>
+                            <form class="pure-form">
+                                <span class="question">Rate this part</span>
+                                <div style="display:inline-block">
+                                    <div id="rate-1" class="rate-dot" style="display:inline-block;width:20px;height:20px;background:transparent;border-radius:10px; border:solid 2px #08c784;"></div>
+                                    <div id="rate-2" class="rate-dot" style="display:inline-block;width:20px;height:20px;background:transparent;border-radius:10px; border:solid 2px #08c784;"></div>
+                                    <div id="rate-3" class="rate-dot" style="display:inline-block;width:20px;height:20px;background:transparent;border-radius:10px; border:solid 2px #08c784;"></div>
+                                    <div id="rate-4" class="rate-dot" style="display:inline-block;width:20px;height:20px;background:transparent;border-radius:10px; border:solid 2px #08c784;"></div>
+                                    <div id="rate-5" class="rate-dot" style="display:inline-block;width:20px;height:20px;background:transparent;border-radius:10px; border:solid 2px #08c784;"></div>
+                                    <!-- <p class="small-ps">Enter the you like to add an review.</p> -->
+                                </div>
+                            </form>
+                            <form class="pure-form">
+                                <span class="question">Enter review paragraphs</span>
+                                <div class="rich-text-container" id="review_content">
+                                    <!-- 富文本编辑器放这里 -->
+                                </div>
+                                <!-- <p class="small-ps"></p> -->
+                            </form>
+                            <form class="pure-form">
+                                <span class="question">Tag your submission</span>
+                                <input id="review-tag" type="text" name="" placeholder="eg: whatever-you-like">
+                                <p class="small-ps">*Should only contain letters, numbers and hyphens. This tag won't appear on the page. However if you want to edit your content in the future, it will help you locate your content quickly.</p>
+                            </form>
+                            <div style="width:100%; height:fit-content;position:relative;padding-bottom:50px;margin-top:20px;">
+                                <div class="solid-button">
+                                    <a>Submit</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="edit-card" style="background:green">
                         <div id="edit-existing" class="scroll-placeholder another"></div>
