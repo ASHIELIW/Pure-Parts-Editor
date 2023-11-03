@@ -143,6 +143,17 @@
         left:calc(50% - 30rem);
     }
 } */
+.iwannasleep {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    height:fit-content;
+    padding-bottom:50px;
+    align-items: start;
+    top:12rem;
+    position:relative;
+}
 #pure-page-1 {
     flex:none;
     display:flex;
@@ -254,4 +265,18 @@ form.pure-form input {
 }
 .small-ps a {
     color:#08c784
+}
+.rich-text-container {
+    min-height:50px;
+    position:relative;
+    width:90%;
+    left:5%;
+    border:#6097f0 2px solid;
+    border-radius: 10px;
+}
+form.pure-form textarea {
+    background:transparent;
+    vertical-align: middle;
+    height:50px;
+
 }
