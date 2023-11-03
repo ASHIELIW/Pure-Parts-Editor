@@ -149,8 +149,9 @@
     flex-wrap: nowrap;
     overflow-x: hidden;
     height:fit-content;
+    overflow-y: visible;
     padding-bottom:50px;
-    align-items: start;
+    align-items: flex-start;
     top:12rem;
     position:relative;
 }
@@ -198,15 +199,22 @@
     margin:0;
     margin-top:0;
 }
+.scroll-placeholder.another {
+    height:50rem;
+}
+
 .pure-new-button a {
     font-family: Clash;
     font-weight: 400;
     color: white;
     height:100%;
+    /* display:inline-block; */
     width:100%;
+    padding:2em;
+    margin:-2em;
 }
 .pure-new-button:hover a {
-    color: #6097f0;
+    color: #76ece0;
     text-decoration: underline;
 }
 .pure-new-button:hover {
@@ -224,6 +232,27 @@
     margin:50px;
     transition: 1s;
     cursor: pointer;
+}
+.solid-button {
+    width:fit-content;
+    position:absolute;
+    top:-5px;
+    cursor: pointer;
+    right:20px;
+    padding: 20px;
+    border-radius: 300px;
+    background:linear-gradient(45deg, #08c784 0%,#387be6 100%);
+    transition:1s;
+}
+.solid-button a {
+    font-family: Clash;
+    font-weight: 400;
+    color: white;
+    height:100%;
+    width:100%;
+}
+.solid-button:hover {
+    -webkit-filter: drop-shadow(0px 0px 5px #89b6ff);
 }
 
 .create-form {
@@ -279,4 +308,17 @@ form.pure-form textarea {
     vertical-align: middle;
     height:50px;
 
+}
+.edit-card {
+    width:100%;
+    height:fit-content;
+    min-height:100px;
+    flex:none;
+    margin-top: -50rem;
+}
+.edit-form {
+    height:fit-content;
+    min-height:50px;
+    border-radius: 30px;
+    border:#6097f0 3px solid;
 }
