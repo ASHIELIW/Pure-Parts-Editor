@@ -36,5 +36,43 @@ window.addEventListener('DOMContentLoaded', () => {
             this.firstElementChild.style.setProperty("font-weight","600")
         }
     }
+//背景高度适应 
+    const array_1 = [document.getElementById("pure-page-1"),document.getElementById("create-2"),document.getElementById("edit-2")];
+    var emmm = document.getElementById("emmmm");
+    var title = document.querySelectorAll(".pure-new-title")[0];
+    var container = document.querySelectorAll(".iwannasleep")[0];
+    emmm.style.setProperty("height", array_1[0].clientHeight *2 + title.clientHeight +"px");
+    window.addEventListener('click',()=> {
+        setTimeout(()=>{
+            console.log(container.scrollLeft)
+            var ratio = container.scrollLeft / window.innerWidth;
+            var index = Math.round(ratio);
+            var height = array_1[index].clientHeight;
+            if (index != 0) {
+                emmm.style.setProperty("height",height + title.clientHeight +"px")
+            }
+        }, 100)
+
+    })
+//我不知道我在写什么，但是总之能跑
+
+//打分的那个小圆圈
+    var dots = document.querySelectorAll(".rate-dot");
+    var k = 0;
+    for (k=0; k<dots.length; k++) {
+        dots[k].onclick = function() {
+            var rate_number = this.getAttribute('id').charAt(this.getAttribute('id').length - 1);
+            var q = 0;
+            for (q=0;q < dots.length; q++) {
+                if ( q < Number(rate_number)) {
+                    dots[q].style.setProperty("background","#08c784");
+                } else {
+                    dots[q].style.setProperty("background","transparent");  
+                }
+            }
+        }
+    }
+//反正这么一番操作之后 rate_number 是一个1-5数字字符串，但是我不是很清楚怎么把它从这一堆嵌套里整出来，你看看咋搞    
+
 
 })
