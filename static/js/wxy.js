@@ -19,9 +19,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
         }
     })
-//上面是想要检测一下输入的 part 号有没有被占
+//上面是想要检测一下输入的 part 号有没有被占，但是
+
 //下面是设置一下 edit 页面点击按钮的激活样式
+//以及 js 写 anchor 滚动
     var buttons = document.querySelectorAll(".pure-new-button.edit");
+    var cards = document.querySelectorAll(".edit-card");
+    var cards_container = document.getElementById("cards-container");
+    var card_width = cards[0].clientWidth;
     var i = 0;
     for (i = 0; i < buttons.length; i++){
         buttons[i].onclick = function() { 
@@ -31,11 +36,20 @@ window.addEventListener('DOMContentLoaded', () => {
                 buttons[k].style.setProperty("background","linear-gradient(to right, #222124, #222124), linear-gradient(45deg, #08c784 0%,#387be6 100%)");
                 buttons[k].firstElementChild.style.setProperty("font-weight","400")
             }
+            index = Number(this.getAttribute('id').charAt(this.getAttribute('id').length - 1));
+            cards_container.scrollTo ({
+                left: index * card_width,
+                behavior:"smooth"
+            })
             this.style.setProperty("border","3px #222124 solid");
             this.style.setProperty("background","linear-gradient(45deg, #08c784 0%,#387be6 100%), linear-gradient(45deg, #08c784 0%,#387be6 100%)")
             this.firstElementChild.style.setProperty("font-weight","600")
         }
     }
+
+    
+
+
 //背景高度适应 
     const array_1 = [document.getElementById("pure-page-1"), document.getElementById("create-2"), document.getElementById("edit-2")];
     var emmm = document.getElementById("emmmm");
@@ -73,7 +87,7 @@ window.addEventListener('DOMContentLoaded', () => {
             var q = 0;
             for (q=0;q < dots.length; q++) {
                 if ( q < Number(rate_number)) {
-                    dots[q].style.setProperty("background","#08c784");
+                    dots[q].style.setProperty("background","#83ffd4");
                 } else {
                     dots[q].style.setProperty("background","transparent");  
                 }
