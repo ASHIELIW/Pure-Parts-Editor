@@ -3,8 +3,22 @@
 {% block content %}
 
 <div id="emmmm" style="width:100%;background:#222124;position:relative;">
+    <div id="background-blocks-container">
+        <img class="bg-block" id="LT-1" src="{{ url_for('static', filename='img/LT-1.svg') }}"/>
+        <img class="bg-block" id="LT-2" src="{{ url_for('static', filename='img/LT-2.svg') }}"/>
+        <img class="bg-block" id="LB-1" src="{{ url_for('static', filename='img/LB-1.svg') }}"/>
+        <img class="bg-block" id="LB-2" src="{{ url_for('static', filename='img/LB-2.svg') }}"/>
+        <img class="bg-block" id="RT-1" src="{{ url_for('static', filename='img/RT-1.svg') }}"/>
+        <img class="bg-block" id="RT-2" src="{{ url_for('static', filename='img/RT-2.svg') }}"/>
+        <img class="bg-block" id="RB-1" src="{{ url_for('static', filename='img/RB-1.svg') }}"/>
+        <img class="bg-block" id="RB-2" src="{{ url_for('static', filename='img/RB-2.svg') }}"/>
+        <img class="bg-block" id="RB-3" src="{{ url_for('static', filename='img/RB-3.svg') }}"/>
+        <div id="gradiant-cover"></div>
+        <div id="another-gradiant-cover"></div>
+    </div>
     <h1 class="font-clash pure-new-title">
-        Pure Parts Editor
+        <div></div>
+        <div>Pure Parts Editor</div>
     </h1>
     <div class="iwannasleep">
         <div id="pure-page-1">
@@ -14,6 +28,11 @@
             <div class="pure-new-button">
                 <a href="#edit">Edit an existing part</a>
             </div>
+            <!-- <div>
+                Team: we have zero backend experience don't know what we're here for
+                <br>Members: Xiaoyi Wang (WHU-China 2023), Kai Lin (DUT-China 2023)
+                <br>Special thanks to: Zhejun Qin, for giving us feedback on parts page experiences.
+            </div> -->
         </div>
         <div id="create-2">
             <div class="scroll-placeholder" id="create"></div>
