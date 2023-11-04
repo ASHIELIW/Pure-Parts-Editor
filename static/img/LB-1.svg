@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_2" data-name="图层 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 258 258">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 8px;
+      }
+    </style>
+  </defs>
+  <g id="_图层_4" data-name="图层 4">
+    <g>
+      <rect class="cls-1" x="4" y="4" width="250" height="250" rx="40.48" ry="40.48"/>
+      <line class="cls-1" x1="24" y1="166" x2="238.84" y2="166"/>
+      <polygon class="cls-1" points="196 78 63 78 63 129 107 129 107 190 152 190 152 129 196 129 196 78"/>
+    </g>
+  </g>
+</svg>
