@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/ii-index.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/lk.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/wxy.css') }}">
-
     <script src="{{ url_for('static', filename='js/wxy.js') }}"></script>
     <script src="{{ url_for('static', filename='js/lk.js') }}"></script>
 </head>
@@ -24,8 +23,10 @@
 
     {% include 'footer.html' %}        
 </body>
-<script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
-<script>
+<!-- <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script> -->
+<script src="{{ url_for('static', filename='CKEditor/build/ckeditor.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='CKEditor/editor-style.css') }}">
+<!-- <script>
     ClassicEditor
     .create( document.querySelector( '#editor' ), {
         placeholder: 'start your parts here...'
@@ -33,6 +34,56 @@
     .catch( error => {
         console.error( error );
     } );
+</script> -->
+
+<script>
+    var editors = document.querySelectorAll('.CKEditor');
+    editors.forEach(function(editor){
+        ClassicEditor
+    .create( editor, {
+        placeholder: 'start your parts here...'
+    })
+    .catch( error => {
+        console.error( error );
+    });
+
+    })
 </script>
+<style>
+    .ck-reset_all :not(.ck-reset_all-excluded *), .ck.ck-reset_all {
+        color:inherit;
+    }
+    .ck.ck-sticky-panel__content {
+        color: #FFFFFF !important;
+    }
+    .ck.ck-sticky-panel__content {
+        background:#387be6 !important;
+    }
+    .ck.ck-reset.ck-editor.ck-rounded-corners .ck.ck-sticky-panel__content {
+        border-radius:20px 20px 0 0 !important;
+    }
+    .ck-reset_all :not(.ck-reset_all-excluded *), .ck.ck-reset, .ck.ck-reset_all {
+        background:inherit;
+    }
+    .ck.ck-reset.ck-editor.ck-rounded-corners *{
+        border:none !important;
+
+    }
+    .ck.ck-reset.ck-editor.ck-rounded-corners {
+        border-radius:20px !important;
+    }
+    .ck.ck-editor__main {
+        background:#222124 !important;
+
+    }
+    .ck.ck-reset.ck-editor.ck-rounded-corners .ck.ck-editor__main {
+        border:2px #387be6 solid !important;
+        border-radius:0 0 10px 10px !important;
+    }
+    .ck.ck-editor__main * {
+        background:transparent !important;
+        /* border-radius:0 0 10px 10px !important; */
+    }
+</style>
 </html>
 
