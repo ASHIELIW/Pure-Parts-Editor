@@ -336,3 +336,26 @@ form.pure-form textarea {
     border:#6097f030 2px solid;
     padding:20px;
 }
+.rate-dot {
+  cursor:pointer;
+}
+
+/* CKEditor 样式  */
+.CKEditor.ck-content {
+  color:#222124;
+  margin:20px 0 !important;
+  border-radius: 10px;
+}
+#container {
+  width: 1000px;
+  margin: 20px auto;
+}
+.ck-editor__editable[role="textbox"] {
+  /* editing area */
+  min-height: 200px;
+}
+.ck-content .image {
+  /* block images */
+  max-width: 80%;
+  margin: 20px auto;
+}
